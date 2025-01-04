@@ -6,6 +6,7 @@
 const clickBtn = document.querySelector('#click');
 const overBtn = document.querySelector('#over');
 const outBtn = document.querySelector('#out');
+const ovoutBtn = document.querySelector('#over-out');
 
 function changeGreen(){
   this.setAttribute("style", "background-color:green");
@@ -22,3 +23,7 @@ clickBtn.addEventListener("click", changeGreen); // 왜 () 없어야해?
 overBtn.addEventListener("mouseover",changeSkyblue);
 
 outBtn.addEventListener("mouseout", changePink);
+
+ovoutBtn.addEventListener('mouseover', changeSkyblue);
+ovoutBtn.addEventListener('mouseout', changePink);
+ovoutBtn.addEventListener('click', changeGreen);
