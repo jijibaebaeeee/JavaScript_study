@@ -1,0 +1,11 @@
+main{
+  display: flex;
+}
+
+.div-box{
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  margin : 10px;
+  border : 1px solid black;
+}
