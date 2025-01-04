@@ -1,0 +1,26 @@
+<!-- 4번 : defer 속성 지연스크립트 -->
+<!-- 이해하고 넘어가기-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <p>defer 속성이 있는 script 태그 전 p태그 입니다.</p> <!--1번-->
+ <script>
+   document.addEventListener("DOMContentLoaded", () => {
+     alert("`defer` 스크립트가 실행 된 후, DOM이 준비되었습니다.");  //4번
+   });
+ </script>
+
+ <script defer src="https://javascript.info/article/script-async-defer/long.js?speed=1"></script> <!--3번-->
+ <p>스크립트 뒤 콘텐츠</p> <!--1번-->
+ <!--지연스크립트는 화면도 같이 보여주고, defer는 백그라운드에서 실행. -->
+ <!--이 태그가 훨 빠르다!-->
+</body>
+</html>
+
+<!--결과
+defer가 있는 script가 실행되고 나서, html에 같이 있는 일반 script가 실행이 된다.-->

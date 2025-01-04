@@ -1,0 +1,36 @@
+<!-- 2번 : 모달창 -->
+<!-- 목표
+css 적용하고
+버튼을 누르면 모달이 열리게 함수를 script 로 작성하고
+다시 화면을 누르면 모달이 닫히는 동작을 구현하세요 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모달창</title>
+  <link rel="stylesheet" href="./../myself_css/modalStudy1.css">
+</head>
+<body>
+  <button onclick="openModal()">모달열기</button>
+  <div class="modal" id="myModal">
+    <div class="modal-content" >
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p>모달이 열렸습니다</p>
+    </div>
+  </div>
+</body>
+<script>
+  const myModal = document.querySelector('.modal');
+  
+  function openModal(){
+    myModal.style.display = "block";
+  }
+
+  function closeModal(){
+    myModal.style.display = "none";
+  }
+</script>
+</html>
+<!--결과
+보여주고 말고를 결정하는 것이 블록이 무엇인지를 인지하고 있어야한다.-->

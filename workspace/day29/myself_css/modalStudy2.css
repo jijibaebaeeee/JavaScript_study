@@ -1,0 +1,90 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+header {
+  background-color: antiquewhite;
+  height: 20vh;
+  /* vh는 뷰포트(사용자 기기화면)을 기준으로 크기가 결정된다
+      20vh 사용자화면의 20%를 의미한다*/
+  display: flex;
+  flex-direction: column; /* 세로로 배치 */
+  justify-content: flex-end; /* 이거는 엄청 유용하다! */
+}
+
+nav {
+  background-color : cadetblue;
+  height: 25%;
+}
+
+li {
+  list-style: none;
+}
+
+nav > ul {
+  display: flex;
+  align-items: center; /* line-height와 같은 결과*/
+  height: 100%;
+}
+
+nav > li {
+  /* border: 1px solid black; */
+  width: 80px;
+  padding: 0 0 0 10px;
+}
+
+.nav--login{
+  cursor: pointer;
+} /* x버튼에 마우스 올렸을 때 변하게했음*/
+
+
+/* 모달창 */
+.modal-box {
+  background-color: beige;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  align-items: center; /*여기서부터*/
+  justify-content: center;
+  top : 0;
+  left : 0; /* 여기까지 가운데정렬용 */
+}
+
+.login-box{
+  background-color: white;
+  width: 300px;
+  padding: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+main {
+  background-color: coral;
+  height: 60vh;
+}
+
+footer {
+  background-color: gray;
+  height: 20vh;
+}
+
+.login-btn-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.x-box {
+  float:right;
+  font-size: 25px;
+  font-weight: bold;
+  top: 10px; /*띄우기*/ 
+  right: 10px; /*띄우기*/
+  cursor: pointer; /* 모달창 x를 누를때 마우스 커서 변하게 함 */
+}

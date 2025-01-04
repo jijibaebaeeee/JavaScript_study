@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인 모달창 만들기</title>
+  <link rel="stylesheet" href="./../myself_css/modalStudy2.css">
+  <script defer src="./../myself_js/modalStudy2.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="header-blank"></div>
+      <ul>
+        <li>홈으로</li>
+        <li>상품구매</li>
+        <li>상품등록</li>
+        <li class="nav--login">로그인</li> <!--navLogin --> <!-- onclick="openModal()" -->
+        <li>회원가입</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="main"></div>
+  </main>
+  <footer>
+    <div class="footer"></div>
+  </footer>
+  <article class="modal-box"> <!-- modalBox -->
+    <div class="login-box">
+      <div class="x-box">&times;</div> <!-- xBox -->
+      <form action="" method="" class="login-form">
+        <h1>로그인</h1>
+        <div>
+          <label for="userid">아이디 : </label>
+          <input type="text" id="userid" name="userid">
+        </div>
+        <div>
+          <label for="userpw">패스워드 : </label>
+          <input type="password" id="userpw" name="userpw">
+        </div>
+        <div class="login-btn-wrap">
+          <button type="submit">로그인</button>
+        </div>
+      </form>
+    </div>
+  </article>
+</body>
+</html>
