@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <!-- CSS 파일 링크 추가 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./task1-alpha.css"> 
+    <script defer src="./task1-alpha.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>To-Do List</h1>
+            <div class="header-sub-container">
+                <!-- <span>홈</span>
+                <span>로그아웃</span>
+                <span>마이페이지</span>
+                <span>나의게시물</span> -->
+                <ul>
+                  <li><a href="#" onclick="ready()">홈</a></li>
+                  <li><a href="#" onclick="ready()">나의 게시물</a></li>
+                  <li><a href="#" class="login">로그인</a></li>
+                  <li><a href="#" class="sign">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="ready()">지난 할일 목록</a></li>
+                <li><a href="#" onclick="ready()">오늘 할일 목록</a></li>
+                <li><a href="#" onclick="ready()">내일 할일 목록</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside>
+          <div class="aside-container"></div>
+        </aside>
+        <section>
+            <h2>Tasks</h2>
+            <ul id="task-list">
+                <!--리스트가 추가되어야하는 영역-->
+            </ul>
+            <button id="add-button">할일 추가</button>
+        </section>
+        <article>
+            <div class="slides-wrap">
+              <ul class="slide-box">
+                <li>
+                  <div class="slide-img">
+                    <img src="./../day28/img/바다.jpg" alt="바다사진" class="test-img">
+                  </div>
+                </li>
+                <li>
+                  <div class="slide-img">
+                    <img src="./../day28/img/도시.jpg" alt="도시사진" class="test-img">
+                  </div>
+                </li>
+                <li>
+                  <div class="slide-img">
+                    <img src="./../day28/img/산.jpg" alt="산사진" class="test-img">
+                  </div>
+                </li>
+              </ul>
+            </div>
+        </article>
+        <div class="big-img-wrap"> <!-- 위치상관이 없네.. 그냥 fixed / zindex 1 /크기높이 100 100 하면 맨 앞으로 온다-->
+          <div class="big-img-box">
+            <img src="" alt="사진없음" class="big-img"> <!-- javascript에서 설정-->
+          </div>
+        </div>
+    </main>
+    <footer>
+      <h5>제작일 : 2025년 1월 5일 18시 32분</h5>
+      <h5>주소 : 동네 카페</h5>
+      <h5>Phone : 010-8xxx-7xxx</h5>
+    </footer>
+    <article class="modal-box"> <!-- modalBox -->
+      <div class="login-box">
+        <div class="x-box">&times;</div> <!-- xBox -->
+        <form action="" method="" class="login-form">
+          <h1>로그인</h1>
+          <div>
+            <label for="userid">아이디 : </label>
+            <input type="text" id="userid" name="userid">
+          </div>
+          <div>
+            <label for="userpw">패스워드 : </label>
+            <input type="password" id="userpw" name="userpw">
+          </div>
+          <div class="login-btn-wrap">
+            <button type="submit">로그인</button>
+          </div>
+        </form>
+      </div>
+    </article>
+    <aritcle class="modal-sign-box">
+      <div class="sign-box">
+        <div class="xx-box">&times;</div>
+        <h1>프로젝트 참. 여. ?</h1>
+        <form class="sign-form">
+          <div><label>전체동의<input type="checkbox" name="all" class="all"></label></div>
+          <div><label>마음의 동의<input type="checkbox" name="term1" class="term"></label></div>
+          <div><label>앞으로 힘듦에 동의<input type="checkbox" name="term2" class="term"></label></div>
+          <div><label>동의 어보감<input type="checkbox" name="term3" class="term"></label></div>
+        </form>
+      </div>
+    </aritcle>
+</body>
+</html>
